@@ -1,0 +1,107 @@
+{
+  "use strict"
+  $(document).ready(function(){
+  //this is how to set up jQuery
+  })
+}
+
+$(anonymously defined function)
+- this is a way to call document.ready shorthand
+x.eq(y)
+- selecting an object at the i index of x
+x.get(y)
+- get the html element y from x
+x.html('y')
+- replace html in x with y
+x.append(y)
+- add y to end of x
+x.prepend(y)
+- add y to begining of x
+x.after(y)
+- put y after x as new element
+x.before(y)
+- put y before x as new element
+x.remove(y)
+- remove y from x
+x.toggleClass(y)
+- toggle y class on x
+x.on("y", function(){
+  //function algorithm
+})
+- applies event listener y to x using the defined function
+
+
+*this* argument
+{
+  "use strict"
+  $(function(){
+    let paragraphs = $("p");
+    paragraphs.on("click", function(){
+      console.log(this);
+    })
+  });
+}
+- jQuery makes using *this* easy -> binds it to the html object. For example:
+    {
+      "use strict"
+      $(function(){
+        let paragraphs = $("p");
+        paragraphs.on("click", function(){
+          let elem = $(this);
+          elem.html("new stuff");
+        })
+      });
+    }
+    - Changes the html of the object clicked when clicked
+
+* when you click on an object on a website, the click goes to the most child of all the
+  * elements, then it propagates up to the parent element
+x.stopPropagation()
+- makes it so the click doesn't go up to the parent elements
+
+{
+  "use strict"
+  $(function(){
+    let paragraphs = $("p");
+    paragraphs.on("click", function(event){
+      console.log(event)
+    })
+  });
+}
+- event has tons of properties, all javascript properties. jQuery changed the target property
+  - to be able to use *this* more effectively
+event.x
+- returns the x attribute of event
+
+{
+  "use strict"
+  $(function(){
+    let section = $("section")
+    section.on("click", "p", function(){
+      console.log($(this));
+    })
+    section.append("<p>appended paragraph</p>")
+  });
+}
+- this function listens for events in its children, making it really simple to append objects(children)
+  - and keep the event listeners on those objects
+
+x.hide()
+- hides x
+x.show()
+- shows x
+x.slideUp()
+- hides x with a transition
+x.slideDown()
+- shows x with a transition
+setTimeout(function(){}, x)
+- calls function after x amount of miliseconds
+x.fadeOut()
+- hides x with a fade
+x.fadeIn()
+- shows x with a fade
+x.toggle()
+- toggles hiding and showing
+- can take arguments as strings: slow, fast, normal, x (in miliseconds)
+x.function().delay(y)
+- delays function y miliseconds

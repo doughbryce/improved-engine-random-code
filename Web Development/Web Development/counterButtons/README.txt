@@ -1,0 +1,1 @@
+Make two buttons: one with a plus sign and one with a minus sign. Have these two buttons next to the word points: 0. When you click the plus button, the points increase by one. When you click the minus button, the points decrease by 1.

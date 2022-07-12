@@ -1,0 +1,18 @@
+To run all rspec tests, type the following into the terminal:
+
+  ' rspec '
+
+I also tagged each suite of rspec on a class by class basis. If
+you only want to run the rspec tests for one class, use one of 
+the following commands:
+
+' rspec --tag candy '
+' rspec --tag candy_bag '
+' rspec --tag restricted_candy_bag '
+' rspec --tag analyzer '
+' rspec --tag talkable '
+
+*If you have a syntax error in any of your code, rspec will not run
+*If you have code that is executing (i.e. not just class and method
+ definitions), rspec might not run. Just comment out any driver code
+ before you run a test.

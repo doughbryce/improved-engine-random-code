@@ -1,0 +1,11 @@
+To run each test, use the following tags:
+  ` rspec --tag cookie `
+  ` rspec --tag chocolate_chip `
+  ` rspec --tag peanut_butter `
+  ` rspec --tag sugar `
+  ` rspec --tag tray `
+  ` rspec --tag oven `
+
+Add the fail fast tag to only see one failing test at a time:
+
+  ` rspec --tag cookie --fail-fast `

@@ -1,0 +1,6 @@
+setInterval(function(){
+  some code
+}, y)
+- run some code after y milliseconds on a loop
+clearInterval(x)
+- stop running x

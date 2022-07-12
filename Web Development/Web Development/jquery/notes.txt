@@ -1,0 +1,36 @@
+* :first **** .first
+* :last **** .last
+* .eq(0)
+###### This is the driver code for all jQuery
+$(document).ready(function(){
+
+});
+---
+$(document).ready(function(){
+  console.log($(".blue")[1]);
+//This becomes an HTML element
+});
+$(document).ready(function(){
+  console.log($("input[name='age']").length);
+});
+* length property important to know that the element has actual value instead of none
+* .eq leaves it in query
+* .get gives you html element
+
+Refining and filtering
+$("h1").has()
+$("h1").not('')
+$("h1").filter()
+$("h1").first()
+$("h1").last()
+$("h1").eq(5)
+$("h1").children()
+$("h1").html() **** getter
+$("body").has("p").html("<h1>title</h1>") **** setter
+
+  let paragraphs = $("p");
+  paragraphs.html("new stuff");
+  ****applies method to all things inside jQuery object
+
+  .next is next sibling
+  .previous is sibling before
